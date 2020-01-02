@@ -39,7 +39,6 @@ extension MenuViewController: MenuViewControllerInterface {
     func loadMenuItems() {
         DispatchQueue.main.async {
             self.menuCollectionView.reloadData()
-
         }
     }
     

@@ -21,7 +21,8 @@ class MenuItemCollectionViewCell: UICollectionViewCell {
     func configure(menuItem: MenuItem){
                 
         guard let resource = URL(string: "http://kerimcaglar.com/uploads/yemek-resimler/" + menuItem.photo!) else {return}
-        self.menuImageView.kf.setImage(with: resource)
+        let placeholder = UIImage(named: "kebap")
+        self.menuImageView.kf.setImage(with: resource, placeholder: placeholder)
         self.menuItemLabel.text = menuItem.name
         
     }
