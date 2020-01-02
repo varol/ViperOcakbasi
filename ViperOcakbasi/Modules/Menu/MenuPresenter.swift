@@ -11,20 +11,12 @@ import Foundation
 protocol MenuPresenterInterface: class {
     //MARK:- View-> Presenter
     func viewDidAppear()
-    func getMenuItems() -> MenuItem?
+    func getMenuItems() -> [MenuItem]?
     
     //MARK:- CollectionView -> Presenter
-    func getMenuImageURL() -> URL?
     func getNumberOfRows() -> Int
 }
 
-extension MenuPresenter {
-    private enum Constant {
-        enum CollectionView{
-            static let numberOfRowsInSection: Int = 2
-        }
-    }
-}
 
 final class MenuPresenter {
 
@@ -32,7 +24,7 @@ final class MenuPresenter {
     private let router: MenuRouterInterface?
     private let interactor: MenuInteractorInterface?
     
-    var menuItemResponse : MenuItem?
+    var menuItemResponse : [MenuItem]?
     
     init(interactor: MenuInteractorInterface,
          router: MenuRouterInterface,
@@ -47,21 +39,19 @@ final class MenuPresenter {
 
 extension MenuPresenter: MenuPresenterInterface {
     func getNumberOfRows() -> Int {
-        return Constant.CollectionView.numberOfRowsInSection
+        return menuItemResponse?.count ?? 0
     }
-    func getMenuImageURL() -> URL? {
-        guard let stringURL = menuItemResponse?.photo else {return nil}
-        let url = URL(string: stringURL)
-        return url
-    }
-    
-    func getMenuItems() -> MenuItem? {
+        
+    func getMenuItems() -> [MenuItem]? {
         return menuItemResponse
     }
     
     func viewDidAppear() {
-        interactor?.fetchMenuItems()
+        DispatchQueue.main.async {
+            self.interactor?.fetchMenuItems()
+        }
     }
+
 }
 
 extension MenuPresenter: MenuItemInteractorInterfaceOutput {
@@ -70,10 +60,8 @@ extension MenuPresenter: MenuItemInteractorInterfaceOutput {
         case .success(let menuItemDataResult):
             self.menuItemResponse = menuItemDataResult
             view.loadMenuItems()
-            break
         case .failure(let error):
             print(error.localizedDescription)
-            break
         }
         
     }

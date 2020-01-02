@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+
 class MenuItemCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var menuImageView: UIImageView!
@@ -18,6 +19,9 @@ class MenuItemCollectionViewCell: UICollectionViewCell {
     }
 
     func configure(menuItem: MenuItem){
+                
+        guard let resource = URL(string: "http://kerimcaglar.com/uploads/yemek-resimler/" + menuItem.photo!) else {return}
+        self.menuImageView.kf.setImage(with: resource)
         self.menuItemLabel.text = menuItem.name
         
     }

@@ -9,7 +9,12 @@
 import Foundation
 
 
-struct MenuItem : Decodable {
+class MenuItem : Decodable {
+//    var id:Int
+//    var name:String
+//    var type:String
+//    var photo:String
+    
 let id : Int?
 let name : String?
 let type : String?

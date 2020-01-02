@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E89EFB78DB956592417BD74 /* Pods_ViperOcakbasi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D354B2397572E34B58DB2F /* Pods_ViperOcakbasi.framework */; };
 		F958692223AFA24B00307EEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F958692123AFA24B00307EEC /* AppDelegate.swift */; };
 		F958692923AFA24B00307EEC /* Ocakbasi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F958692723AFA24B00307EEC /* Ocakbasi.storyboard */; };
 		F958692B23AFA25100307EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F958692A23AFA25100307EEC /* Assets.xcassets */; };
@@ -19,12 +20,14 @@
 		F958694723AFAF8B00307EEC /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F958694623AFAF8B00307EEC /* UICollectionViewExtension.swift */; };
 		F958694C23AFAFFE00307EEC /* MenuItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F958694A23AFAFFE00307EEC /* MenuItemCollectionViewCell.swift */; };
 		F958694D23AFAFFE00307EEC /* MenuItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F958694B23AFAFFE00307EEC /* MenuItemCollectionViewCell.xib */; };
-		F958695023AFB35A00307EEC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F958694F23AFB35A00307EEC /* Kingfisher */; };
 		F958695323AFDA6900307EEC /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F958695223AFDA6900307EEC /* Storyboard.swift */; };
-		F958695623AFE8A500307EEC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F958695523AFE8A500307EEC /* Alamofire */; };
+		F9D1FC2923BE69C3005FC089 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D1FC2823BE69C3005FC089 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8BDA723C6EAF23D133AD09B7 /* Pods-ViperOcakbasi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperOcakbasi.release.xcconfig"; path = "Target Support Files/Pods-ViperOcakbasi/Pods-ViperOcakbasi.release.xcconfig"; sourceTree = "<group>"; };
+		A5D354B2397572E34B58DB2F /* Pods_ViperOcakbasi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperOcakbasi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E492CBEC3129B1FD47AED51B /* Pods-ViperOcakbasi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperOcakbasi.debug.xcconfig"; path = "Target Support Files/Pods-ViperOcakbasi/Pods-ViperOcakbasi.debug.xcconfig"; sourceTree = "<group>"; };
 		F958691E23AFA24B00307EEC /* ViperOcakbasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperOcakbasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F958692123AFA24B00307EEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F958692823AFA24B00307EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Ocakbasi.storyboard; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		F958694A23AFAFFE00307EEC /* MenuItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		F958694B23AFAFFE00307EEC /* MenuItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		F958695223AFDA6900307EEC /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		F9D1FC2823BE69C3005FC089 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,19 +51,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F958695023AFB35A00307EEC /* Kingfisher in Frameworks */,
-				F958695623AFE8A500307EEC /* Alamofire in Frameworks */,
+				9E89EFB78DB956592417BD74 /* Pods_ViperOcakbasi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		874C12DC97B303AFD608605D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E492CBEC3129B1FD47AED51B /* Pods-ViperOcakbasi.debug.xcconfig */,
+				8BDA723C6EAF23D133AD09B7 /* Pods-ViperOcakbasi.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C2B0CB56EAA989596F9C7A8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5D354B2397572E34B58DB2F /* Pods_ViperOcakbasi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F958691523AFA24B00307EEC = {
 			isa = PBXGroup;
 			children = (
 				F958692023AFA24B00307EEC /* ViperOcakbasi */,
 				F958691F23AFA24B00307EEC /* Products */,
+				874C12DC97B303AFD608605D /* Pods */,
+				C2B0CB56EAA989596F9C7A8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +97,7 @@
 		F958692023AFA24B00307EEC /* ViperOcakbasi */ = {
 			isa = PBXGroup;
 			children = (
+				F9D1FC2723BE698B005FC089 /* Network */,
 				F958693723AFA63D00307EEC /* Modules */,
 				F958693523AFA55300307EEC /* Storyboards */,
 				F958693623AFA59000307EEC /* Supporting Files */,
@@ -104,8 +128,6 @@
 		F958693723AFA63D00307EEC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				F958694823AFAFCD00307EEC /* View */,
-				F958694123AFAAC400307EEC /* Entity */,
 				F958693823AFA64800307EEC /* Menu */,
 			);
 			path = Modules;
@@ -114,6 +136,8 @@
 		F958693823AFA64800307EEC /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				F958694823AFAFCD00307EEC /* View */,
+				F958694123AFAAC400307EEC /* Entity */,
 				F958693923AFA66C00307EEC /* MenuInteractor.swift */,
 				F958693A23AFA66C00307EEC /* MenuPresenter.swift */,
 				F958693B23AFA66C00307EEC /* MenuRouter.swift */,
@@ -172,6 +196,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		F9D1FC2723BE698B005FC089 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F9D1FC2823BE69C3005FC089 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,19 +211,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F958693223AFA25100307EEC /* Build configuration list for PBXNativeTarget "ViperOcakbasi" */;
 			buildPhases = (
+				23F848CB4014082EABD62802 /* [CP] Check Pods Manifest.lock */,
 				F958691A23AFA24B00307EEC /* Sources */,
 				F958691B23AFA24B00307EEC /* Frameworks */,
 				F958691C23AFA24B00307EEC /* Resources */,
+				4FBD149BC0F7E3267F364125 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ViperOcakbasi;
-			packageProductDependencies = (
-				F958694F23AFB35A00307EEC /* Kingfisher */,
-				F958695523AFE8A500307EEC /* Alamofire */,
-			);
 			productName = ViperOcakbasi;
 			productReference = F958691E23AFA24B00307EEC /* ViperOcakbasi.app */;
 			productType = "com.apple.product-type.application";
@@ -220,10 +250,6 @@
 				Base,
 			);
 			mainGroup = F958691523AFA24B00307EEC;
-			packageReferences = (
-				F958694E23AFB35A00307EEC /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				F958695423AFE8A500307EEC /* XCRemoteSwiftPackageReference "Alamofire" */,
-			);
 			productRefGroup = F958691F23AFA24B00307EEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -247,6 +273,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23F848CB4014082EABD62802 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ViperOcakbasi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FBD149BC0F7E3267F364125 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ViperOcakbasi/Pods-ViperOcakbasi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ViperOcakbasi/Pods-ViperOcakbasi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ViperOcakbasi/Pods-ViperOcakbasi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F958691A23AFA24B00307EEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -254,6 +322,7 @@
 			files = (
 				F958694323AFAAF700307EEC /* MenuItem.swift in Sources */,
 				F958692223AFA24B00307EEC /* AppDelegate.swift in Sources */,
+				F9D1FC2923BE69C3005FC089 /* NetworkManager.swift in Sources */,
 				F958694023AFA66C00307EEC /* MenuViewController.swift in Sources */,
 				F958694723AFAF8B00307EEC /* UICollectionViewExtension.swift in Sources */,
 				F958693E23AFA66C00307EEC /* MenuPresenter.swift in Sources */,
@@ -402,6 +471,7 @@
 		};
 		F958693323AFA25100307EEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E492CBEC3129B1FD47AED51B /* Pods-ViperOcakbasi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -420,6 +490,7 @@
 		};
 		F958693423AFA25100307EEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BDA723C6EAF23D133AD09B7 /* Pods-ViperOcakbasi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,38 +529,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		F958694E23AFB35A00307EEC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.12.0;
-			};
-		};
-		F958695423AFE8A500307EEC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.9.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F958694F23AFB35A00307EEC /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F958694E23AFB35A00307EEC /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-		F958695523AFE8A500307EEC /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F958695423AFE8A500307EEC /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F958691623AFA24B00307EEC /* Project object */;
 }

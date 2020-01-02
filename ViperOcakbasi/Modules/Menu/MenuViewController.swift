@@ -37,8 +37,10 @@ class MenuViewController: UIViewController {
 
 extension MenuViewController: MenuViewControllerInterface {
     func loadMenuItems() {
-        
-        menuCollectionView.reloadData()
+        DispatchQueue.main.async {
+            self.menuCollectionView.reloadData()
+
+        }
     }
     
 
@@ -54,17 +56,17 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = menuCollectionView.dequeueReusableCell(withReuseIdentifier: "MenuItemCollectionViewCell", for: indexPath) as! MenuItemCollectionViewCell
         
         if let menuItem = presenter?.getMenuItems(){
-            cell.configure(menuItem: menuItem)
+            cell.configure(menuItem: menuItem[indexPath.row])
         }
         
         return cell
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height)
+
+        return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width), height: 250)
     }
-    
-    
     
     
 }
