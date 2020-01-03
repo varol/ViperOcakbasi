@@ -9,7 +9,7 @@ import Foundation
 
 
 class NetworkManager: NSObject {
-    let apiEndpoint = URL(string: "http://varol.us/jsonformatter.json")!
+    let apiEndpoint = URL(string: "http://kerimcaglar.com/yemek-tarifi")!
     
 
     static let sharedInstance: NetworkManager = {
