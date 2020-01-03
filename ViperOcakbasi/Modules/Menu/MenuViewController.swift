@@ -57,7 +57,6 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if let menuItem = presenter?.getMenuItems(){
             cell.configure(menuItem: menuItem[indexPath.row])
         }
-        
         return cell
     }
     
