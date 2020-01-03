@@ -1,0 +1,6 @@
+framework module Pods_ViperOcakbasi {
+  umbrella header "Pods-ViperOcakbasi-umbrella.h"
+
+  export *
+  module * { export * }
+}
